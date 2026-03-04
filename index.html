@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RUBYA | Engenharia - Assistência Técnica Judicial</title>
+    
+    <title>RUBYA | Engenharia - Assistência Técnica Judicial em Bauru</title>
+    <meta name="description" content="Especialista em Perícias de Engenharia Química, Segurança do Trabalho e Gestão Ambiental. Assistência técnica judicial em Bauru e região.">
+    <meta name="keywords" content="perícia judicial, engenharia química, segurança do trabalho, bauru, assistente técnico, IBAPE-SP, insalubridade, periculosidade">
+    <meta name="author" content="Júlio César Rubiá">
+    <link rel="canonical" href="https://www.rubyaengenharia.com.br">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -16,19 +22,10 @@
             --branco: #ffffff;
         }
 
-        * { box-sizing: border-box; }
-        
-        body { 
-            font-family: 'Open Sans', sans-serif; 
-            margin: 0; 
-            color: var(--grafite-texto); 
-            line-height: 1.6;
-            background-color: var(--branco);
-        }
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: 'Open Sans', sans-serif; margin: 0; color: var(--grafite-texto); line-height: 1.6; }
 
-        h1, h2, h3 { font-family: 'Montserrat', sans-serif; color: var(--azul-autoridade); }
-
-        /* Header */
+        /* Header e Navegação */
         header { 
             background: var(--branco); 
             padding: 15px 5%; 
@@ -36,139 +33,49 @@
             justify-content: space-between; 
             align-items: center; 
             box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
+            position: sticky; top: 0; z-index: 1000; 
         }
         
         .logo-container { border-left: 4px solid var(--azul-autoridade); padding-left: 15px; }
-        .logo-main { font-size: 22px; font-weight: 700; letter-spacing: 1px; color: var(--azul-autoridade); }
+        .logo-main { font-size: 22px; font-weight: 700; color: var(--azul-autoridade); }
         .logo-sub { font-size: 12px; text-transform: uppercase; color: var(--azul-tecnico); display: block; }
 
-        .btn-contato { 
-            background: var(--azul-autoridade); 
-            color: white; 
-            padding: 12px 25px; 
-            text-decoration: none; 
-            border-radius: 4px; 
-            font-weight: 600;
-            transition: 0.3s;
-        }
-        .btn-contato:hover { background: var(--azul-tecnico); }
+        .lang-selector { margin-right: 20px; }
+        .lang-selector button { background: none; border: 1px solid #ccc; cursor: pointer; padding: 2px 8px; border-radius: 4px; font-size: 12px; }
 
         /* Hero */
         .hero { 
-            background: linear-gradient(rgba(0,51,102,0.85), rgba(0,51,102,0.85)), url('https://images.unsplash.com/photo-1532187875605-2fe35922996e?q=80&w=1470&auto=format&fit=crop'); 
-            background-size: cover;
-            background-position: center;
-            color: white; 
-            padding: 120px 5%; 
-            text-align: center; 
+            background: linear-gradient(rgba(0,51,102,0.85), rgba(0,51,102,0.85)), url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1470&auto=format&fit=crop'); 
+            background-size: cover; background-position: center;
+            color: white; padding: 100px 5%; text-align: center; 
         }
         .hero h1 { color: white; font-size: 2.8rem; margin-bottom: 15px; }
-        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; opacity: 0.9; }
 
-        /* Serviços */
-        .servicos { padding: 80px 5%; background-color: var(--cinza-executivo); text-align: center; }
-        .grid-servicos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card-servico { 
-            background: var(--branco); 
-            padding: 40px; 
-            border-radius: 2px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            transition: transform 0.3s;
-            border-top: 5px solid var(--azul-autoridade);
-        }
-        .card-servico:hover { transform: translateY(-5px); }
-        .card-servico i { font-size: 45px; color: var(--azul-tecnico); margin-bottom: 20px; }
+        /* Formulário de Leads */
+        .orcamento { padding: 60px 5%; background-color: var(--cinza-executivo); }
+        .form-container { max-width: 600px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .form-container input, .form-container textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; }
+        .form-btn { background: var(--azul-autoridade); color: white; width: 100%; padding: 15px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; }
 
-        /* FAQ */
-        .faq { padding: 80px 5%; max-width: 900px; margin: 0 auto; }
-        details { background: var(--cinza-executivo); margin-bottom: 10px; padding: 15px; border-radius: 5px; cursor: pointer; }
-        summary { font-weight: 600; color: var(--azul-autoridade); }
-	<section id="orcamento" style="padding: 60px 5%; background-color: #f4f7f6;">
-   	 <div style="max-width: 800px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-     	   <h2 style="text-align: center; color: #003366;">Solicitação de Orçamento</h2>
-      	  <p style="text-align: center; color: #666; margin-bottom: 30px;">Preencha os dados básicos para análise de viabilidade e cálculo de honorários (IBAPE-SP).</p>
-        
-     	   <form action="https://formspree.io/f/SEU_ID_AQUI" method="POST" style="display: grid; gap: 20px;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                <input type="text" name="nome" placeholder="Nome do Advogado/Escritório" required style="padding: 12px; border: 1px solid #ccc; border-radius: 4px;">
-                <input type="email" name="email" placeholder="E-mail para contato" required style="padding: 12px; border: 1px solid #ccc; border-radius: 4px;">
-            </div>
-            
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                <input type="text" name="processo" placeholder="Nº do Processo (Ex: 1000582-90...)" required style="padding: 12px; border: 1px solid #ccc; border-radius: 4px;">
-                <select name="tribunal" required style="padding: 12px; border: 1px solid #ccc; border-radius: 4px;">
-                    <option value="">Selecione o Tribunal</option>
-                    <option value="TJSP">TJSP (Bauru e Região)</option>
-                    <option value="TRT">TRT (Justiça do Trabalho)</option>
-                    <option value="Outro">Outros</option>
-                </select>
-            </div>
-
-            <select name="area_atuacao" required style="padding: 12px; border: 1px solid #ccc; border-radius: 4px;">
-                <option value="">Área de Atuação Requerida</option>
-                <option value="Quimica">Engenharia Química (Processos/Produtos)</option>
-                <option value="Ambiental">Gestão Ambiental (Resíduos/Passivos)</option>
-                <option value="Seguranca">Segurança do Trabalho (Insalubridade/Periculosidade)</option>
-            </select>
-
-            <textarea name="descricao" rows="4" placeholder="Breve resumo do objeto da perícia ou quesitos necessários..." style="padding: 12px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
-
-            <button type="submit" style="background: #003366; color: white; padding: 15px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; transition: 0.3s;">
-                ENVIAR SOLICITAÇÃO DE PROPOSTA
-            </button>
-        </form>
-    </div>
-	</section>
-	<section id="contato" style="padding: 80px 5%; background-color: #ffffff; text-align: center;">
-   	 <h2 style="margin-bottom: 20px;">Entre em Contato</h2>
-   	 <p style="max-width: 600px; margin: 0 auto 40px; color: #666;">
-        Para solicitações de assistência técnica, elaboração de quesitos ou orçamentos baseados na Tabela IBAPE-SP, utilize os canais abaixo.
-   	 </p>
-
-   	 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-    	    <div style="padding: 20px; border: 1px solid #eee; border-radius: 8px; width: 280px;">
-            <i class="fas fa-envelope" style="font-size: 30px; color: #003366; margin-bottom: 15px;"></i>
-            <h4 style="margin: 10px 0;">E-mail Profissional</h4>
-            <a href="mailto:perito.rubya@gmail.com" style="color: #00509D; text-decoration: none; font-weight: 600;">perito.rubya@gmail.com</a>
-        </div>
-
-        <div style="padding: 20px; border: 1px solid #eee; border-radius: 8px; width: 280px;">
-            <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #003366; margin-bottom: 15px;"></i>
-            <h4 style="margin: 10px 0;">Escritório</h4>
-            <p style="font-size: 14px; color: #444;">Rua Rio Branco, 7-19, Sala 905<br>Bauru-SP</p>
-        </div>
-
-        <div style="padding: 20px; border: 1px solid #eee; border-radius: 8px; width: 280px;">
-            <i class="fas fa-phone-alt" style="font-size: 30px; color: #003366; margin-bottom: 15px;"></i>
-            <h4 style="margin: 10px 0;">Telefones</h4>
-            <p style="font-size: 14px; color: #444;">(14) 3243-4821<br>(14) 98135-3344</p>
-        </div>
-    </div>
-</section>
         /* Footer */
-        footer { background: #1a1a1a; color: white; padding: 50px 5%; text-align: center; font-size: 0.9rem; }
-        .footer-info { margin-bottom: 20px; color: #bbb; }
-        
+        footer { background: #1a1a1a; color: white; padding: 50px 5%; text-align: center; }
+        footer a { color: #fff; text-decoration: none; transition: 0.3s; }
+        footer a:hover { color: var(--azul-tecnico); }
+
+        /* WhatsApp Flutuante */
         .whatsapp-float { 
-            position: fixed; 
-            bottom: 30px; 
-            right: 30px; 
-            background: #25d366; 
-            color: white; 
-            width: 65px; 
-            height: 65px; 
-            border-radius: 50%; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            font-size: 32px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
-            z-index: 1000; 
-            text-decoration: none; 
+            position: fixed; bottom: 30px; right: 30px; 
+            background: #25d366; color: white; width: 60px; height: 60px; 
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+            font-size: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 1000; 
         }
+
+        /* Aviso de Cookies */
+        #cookie-banner {
+            position: fixed; bottom: 0; left: 0; width: 100%; background: #333; color: #fff;
+            padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; z-index: 9999;
+        }
+        #cookie-banner button { background: var(--azul-tecnico); color: white; border: none; padding: 8px 20px; cursor: pointer; border-radius: 4px; }
     </style>
 </head>
 <body>
@@ -176,66 +83,100 @@
     <header>
         <div class="logo-container">
             <span class="logo-main">RUBYA | ENGENHARIA</span>
-            <span class="logo-sub">Assistência Técnica Judicial</span>
+            <span class="logo-sub" id="sub-title">Assistência Técnica Judicial</span>
         </div>
-        <a href="https://wa.me/5514981353344" class="btn-contato">Solicitar Proposta</a>
+        <div>
+            <div class="lang-selector">
+                <button onclick="changeLang('pt')">PT</button>
+                <button onclick="changeLang('en')">EN</button>
+                <button onclick="changeLang('es')">ES</button>
+            </div>
+        </div>
     </header>
 
     <section class="hero">
-        <h1>Precisão Técnica em Demandas Judiciais</h1>
-        <p>Engenharia Química especializada em perícias, análise de resíduos e segurança do trabalho. Honorários pautados pela Tabela IBAPE-SP.</p>
+        <h1 id="hero-title">Precisão Técnica em Demandas Judiciais</h1>
+        <p id="hero-desc">Engenharia Química especializada em perícias, análise de resíduos e segurança do trabalho.</p>
         <div style="font-weight: 600;">Júlio César Rubiá | CREA-SP 5070517125</div>
     </section>
 
-    <section class="servicos">
-        <h2 style="margin-bottom: 10px;">Atuação Especializada e Atribuições Legais</h2>
-        <p style="margin-bottom: 40px; color: #666;">Serviços técnicos executados em conformidade com as resoluções do CREA-SP e Normas Regulamentadoras.</p>
-        
-        <div class="grid-servicos">
-            <div class="card-servico">
-                <i class="fas fa-flask"></i>
-                <h3>Engenharia Química</h3>
-                <p style="text-align: justify; font-size: 0.85rem;">Atuação em processos industriais, operações unitárias e controle de qualidade. Elaboração de pareceres sobre reações químicas, classificação de produtos e acompanhamento de ensaios laboratoriais periciais. Atribuições para análise de processos de transformação e tratamentos físico-químicos, garantindo o rigor técnico na fiscalização de metodologias de amostragem.</p>
-            </div>
-
-            <div class="card-servico">
-                <i class="fas fa-leaf"></i>
-                <h3>Gestão Ambiental e Resíduos</h3>
-                <p style="text-align: justify; font-size: 0.85rem;">Especialista em Gerenciamento de Resíduos Sólidos e Líquidos. Atribuições para elaboração de PGRS, análise de passivos ambientais em solo e águas, e conformidade com licenciamentos. Assistência técnica em ações de danos ambientais, valoração de passivos e verificação de conformidade com as diretrizes da CETESB e legislação vigente.</p>
-            </div>
-
-            <div class="card-servico">
-                <i class="fas fa-hard-hat"></i>
-                <h3>Engenharia de Segurança do Trabalho</h3>
-                <p style="text-align: justify; font-size: 0.85rem;">**Engenheiro de Segurança do Trabalho habilitado.** Atuação em perícias de Insalubridade (NR-15) e Periculosidade (NR-16). Elaboração de laudos de LTCAT, análise de riscos ocupacionais, PGR e gestão de EPIs. Expertise na fundamentação técnica para contestação ou suporte de laudos periciais trabalhistas, unindo o conhecimento químico à higiene ocupacional.</p>
-            </div>
+    <section class="orcamento" id="lead-section">
+        <div class="form-container">
+            <h2 style="text-align: center; color: var(--azul-autoridade);" id="form-title">Solicitar Contato</h2>
+            <form action="https://script.google.com/macros/s/AKfycbz-e3LPxItfCOehjhz-duYD4a2pBhwXkec5jT13ssgN2dHPJu3UuDP5NUUTzkdw6pVh/exec" method="POST">
+                <input type="text" name="nome" placeholder="Nome Completo" required>
+                <input type="tel" name="telefone" placeholder="Telefone / WhatsApp" required>
+                <input type="email" name="email" placeholder="Seu E-mail" required>
+                <textarea name="mensagem" rows="3" placeholder="Mensagem (Opcional)"></textarea>
+                <input type="hidden" name="origem" value="Site_Principal">
+                <button type="submit" class="form-btn" id="btn-send">ENVIAR PARA PLANILHA</button>
+            </form>
         </div>
-    </section>
-
-    <section class="faq">
-        <h2 style="text-align: center; margin-bottom: 40px;">Dúvidas Frequentes</h2>
-        <details>
-            <summary>Como solicitar um orçamento de honorários?</summary>
-            <p>Basta enviar o número do processo ou o objeto da perícia. Calculamos as horas técnicas com base na complexidade exigida pela Tabela IBAPE-SP.</p>
-        </details>
-        <details>
-            <summary>O assistente técnico acompanha a diligência no local?</summary>
-            <p>Sim. A presença física do assistente é fundamental para garantir que a metodologia do perito judicial esteja em conformidade técnica.</p>
-        </details>
     </section>
 
     <footer>
-        <div class="footer-info">
-            <p><strong>RUBYA | ENGENHARIA</strong><br>
-            Rua Rio Branco, 7-19, Sala 905 - Edifício Clemente de Faria, Bauru-SP<br>
-            CREA-SP 5070517125 | (14) 3243-4821 | (14) 98135-3344</p>
-        </div>
+        <p><strong>RUBYA | ENGENHARIA</strong></p>
+        <p>
+            <i class="fas fa-map-marker-alt"></i> <a href="https://maps.google.com/?q=Rua+Rio+Branco,+7-19,+Bauru+SP" target="_blank">Rua Rio Branco, 7-19, Sala 905 - Bauru-SP</a><br>
+            <i class="fas fa-envelope"></i> <a href="mailto:perito.rubya@gmail.com">perito.rubya@gmail.com</a><br>
+            <i class="fas fa-phone"></i> <a href="tel:+551432434821">(14) 3243-4821</a> | <a href="tel:+5514981353344">(14) 98135-3344</a>
+        </p>
         <p style="font-size: 0.7rem; opacity: 0.5;">&copy; 2026 Júlio César Rubiá. Todos os direitos reservados.</p>
     </footer>
 
-    <a href="https://wa.me/5514981353344" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5514981353344?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20assistência%20técnica." class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <div id="cookie-banner">
+        <p id="cookie-text">Este site utiliza cookies para garantir a melhor experiência possível.</p>
+        <button onclick="acceptCookies()">OK</button>
+    </div>
+
+    <script>
+        // Função simples de troca de idioma
+        const translations = {
+            pt: {
+                sub: "Assistência Técnica Judicial",
+                hero: "Precisão Técnica em Demandas Judiciais",
+                form: "Solicitar Contato",
+                btn: "ENVIAR PARA PLANILHA",
+                cookie: "Este site utiliza cookies para garantir a melhor experiência."
+            },
+            en: {
+                sub: "Forensic Engineering Assistance",
+                hero: "Technical Precision in Legal Demands",
+                form: "Request Contact",
+                btn: "SEND TO SPREADSHEET",
+                cookie: "This website uses cookies to ensure the best experience."
+            },
+            es: {
+                sub: "Asistencia Técnica Judicial",
+                hero: "Precisión Técnica en Demandas Judiciales",
+                form: "Solicitar Contacto",
+                btn: "ENVIAR A PLANILLA",
+                cookie: "Este sitio utiliza cookies para garantizar la mejor experiencia."
+            }
+        };
+
+        function changeLang(lang) {
+            document.getElementById('sub-title').innerText = translations[lang].sub;
+            document.getElementById('hero-title').innerText = translations[lang].hero;
+            document.getElementById('form-title').innerText = translations[lang].form;
+            document.getElementById('btn-send').innerText = translations[lang].btn;
+            document.getElementById('cookie-text').innerText = translations[lang].cookie;
+        }
+
+        function acceptCookies() {
+            document.getElementById('cookie-banner').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+        }
+
+        window.onload = () => {
+            if(localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookie-banner').style.display = 'none';
+            }
+        };
+    </script>
 </body>
 </html>
