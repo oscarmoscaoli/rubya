@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>RUBYA | Engenharia - Assistência Técnica Judicial em Bauru</title>
-    <meta name="description" content="Especialista em Perícias de Engenharia Química, Segurança do Trabalho e Gestão Ambiental. Assistência técnica judicial em Bauru e região.">
-    <meta name="keywords" content="perícia judicial, engenharia química, segurança do trabalho, bauru, assistente técnico, IBAPE-SP, insalubridade, periculosidade">
+    <title>RUBYA | Engenharia - Assistência Técnica Judicial</title>
+    <meta name="description" content="Especialista em Perícias de Engenharia Química, Segurança do Trabalho e Gestão Ambiental em Bauru e região.">
+    <meta name="keywords" content="perícia judicial, engenharia química, segurança do trabalho, bauru, assistente técnico, IBAPE-SP">
     <meta name="author" content="Júlio César Rubiá">
-    <link rel="canonical" href="https://www.rubyaengenharia.com.br">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -20,12 +19,13 @@
             --cinza-executivo: #F4F7F6;
             --grafite-texto: #333333;
             --branco: #ffffff;
+            --verde-whatsapp: #25d366;
         }
 
         * { box-sizing: border-box; scroll-behavior: smooth; }
-        body { font-family: 'Open Sans', sans-serif; margin: 0; color: var(--grafite-texto); line-height: 1.6; }
+        body { font-family: 'Open Sans', sans-serif; margin: 0; color: var(--grafite-texto); line-height: 1.6; background-color: var(--branco); }
 
-        /* Header e Navegação */
+        /* Header */
         header { 
             background: var(--branco); 
             padding: 15px 5%; 
@@ -37,11 +37,11 @@
         }
         
         .logo-container { border-left: 4px solid var(--azul-autoridade); padding-left: 15px; }
-        .logo-main { font-size: 22px; font-weight: 700; color: var(--azul-autoridade); }
-        .logo-sub { font-size: 12px; text-transform: uppercase; color: var(--azul-tecnico); display: block; }
+        .logo-main { font-size: 20px; font-weight: 700; color: var(--azul-autoridade); display: block; }
+        .logo-sub { font-size: 11px; text-transform: uppercase; color: var(--azul-tecnico); display: block; }
 
-        .lang-selector { margin-right: 20px; }
-        .lang-selector button { background: none; border: 1px solid #ccc; cursor: pointer; padding: 2px 8px; border-radius: 4px; font-size: 12px; }
+        .lang-selector button { background: none; border: 1px solid #ddd; cursor: pointer; padding: 5px 10px; border-radius: 4px; font-size: 12px; transition: 0.3s; }
+        .lang-selector button:hover { background: var(--cinza-executivo); }
 
         /* Hero */
         .hero { 
@@ -49,33 +49,61 @@
             background-size: cover; background-position: center;
             color: white; padding: 100px 5%; text-align: center; 
         }
-        .hero h1 { color: white; font-size: 2.8rem; margin-bottom: 15px; }
+        .hero h1 { color: white; font-family: 'Montserrat'; font-size: 2.5rem; margin-bottom: 15px; }
+        .hero p { max-width: 800px; margin: 0 auto 25px; font-size: 1.1rem; opacity: 0.9; }
+
+        /* Serviços Estilizados */
+        .servicos { padding: 80px 5%; text-align: center; }
+        .grid-servicos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .card-servico { 
+            background: var(--branco); padding: 40px; border-radius: 12px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 5px solid var(--azul-autoridade);
+            transition: 0.3s;
+        }
+        .card-servico:hover { transform: translateY(-10px); }
+        .card-servico i { font-size: 40px; color: var(--azul-tecnico); margin-bottom: 20px; }
+        .card-servico h3 { margin-bottom: 15px; }
 
         /* Formulário de Leads */
-        .orcamento { padding: 60px 5%; background-color: var(--cinza-executivo); }
+        .orcamento { padding: 80px 5%; background-color: var(--cinza-executivo); }
         .form-container { max-width: 600px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .form-container input, .form-container textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; }
-        .form-btn { background: var(--azul-autoridade); color: white; width: 100%; padding: 15px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; }
+        .form-container input, .form-container textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; }
+        .form-btn { background: var(--azul-autoridade); color: white; width: 100%; padding: 15px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .form-btn:hover { background: var(--azul-tecnico); }
+
+        /* FAQ Dinâmico */
+        .faq-section { padding: 80px 5%; max-width: 900px; margin: 0 auto; }
+        .faq-item { background: var(--cinza-executivo); margin-bottom: 15px; border-radius: 8px; overflow: hidden; border-left: 5px solid var(--azul-autoridade); }
+        .faq-question { padding: 20px; cursor: pointer; font-weight: 600; color: var(--azul-autoridade); display: flex; justify-content: space-between; align-items: center; }
+        .faq-answer { padding: 0 20px 20px; color: #555; display: none; }
 
         /* Footer */
-        footer { background: #1a1a1a; color: white; padding: 50px 5%; text-align: center; }
-        footer a { color: #fff; text-decoration: none; transition: 0.3s; }
-        footer a:hover { color: var(--azul-tecnico); }
+        footer { background: #1a1a1a; color: white; padding: 60px 5%; text-align: center; }
+        footer a { color: #fff; text-decoration: none; }
+        .footer-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-bottom: 30px; }
+        .footer-item i { font-size: 24px; color: var(--azul-tecnico); margin-bottom: 10px; display: block; }
 
-        /* WhatsApp Flutuante */
+        /* WhatsApp e Cookies (Z-Index Ajustado) */
         .whatsapp-float { 
             position: fixed; bottom: 30px; right: 30px; 
-            background: #25d366; color: white; width: 60px; height: 60px; 
+            background: var(--verde-whatsapp); color: white; width: 60px; height: 60px; 
             border-radius: 50%; display: flex; align-items: center; justify-content: center; 
-            font-size: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 1000; 
+            font-size: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 10001; 
+            transition: 0.3s;
         }
+        .whatsapp-float:hover { transform: scale(1.1); }
 
-        /* Aviso de Cookies */
         #cookie-banner {
-            position: fixed; bottom: 0; left: 0; width: 100%; background: #333; color: #fff;
-            padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; z-index: 9999;
+            position: fixed; bottom: 0; left: 0; width: 100%; background: #1a1a1a; color: #fff;
+            padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; z-index: 10000;
+            border-top: 3px solid var(--azul-tecnico);
         }
-        #cookie-banner button { background: var(--azul-tecnico); color: white; border: none; padding: 8px 20px; cursor: pointer; border-radius: 4px; }
+        #cookie-banner button { background: var(--azul-tecnico); color: white; border: none; padding: 8px 25px; cursor: pointer; border-radius: 4px; font-weight: 600; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            #cookie-banner { flex-direction: column; text-align: center; gap: 15px; }
+        }
     </style>
 </head>
 <body>
@@ -85,95 +113,177 @@
             <span class="logo-main">RUBYA | ENGENHARIA</span>
             <span class="logo-sub" id="sub-title">Assistência Técnica Judicial</span>
         </div>
-        <div>
-            <div class="lang-selector">
-                <button onclick="changeLang('pt')">PT</button>
-                <button onclick="changeLang('en')">EN</button>
-                <button onclick="changeLang('es')">ES</button>
-            </div>
+        <div class="lang-selector">
+            <button onclick="changeLang('pt')">PT</button>
+            <button onclick="changeLang('en')">EN</button>
+            <button onclick="changeLang('es')">ES</button>
         </div>
     </header>
 
     <section class="hero">
         <h1 id="hero-title">Precisão Técnica em Demandas Judiciais</h1>
-        <p id="hero-desc">Engenharia Química especializada em perícias, análise de resíduos e segurança do trabalho.</p>
-        <div style="font-weight: 600;">Júlio César Rubiá | CREA-SP 5070517125</div>
+        <p id="hero-desc">Engenharia Química especializada em perícias, análise de resíduos e segurança do trabalho. Honorários pautados pela Tabela IBAPE-SP.</p>
+        <div style="font-weight: 600; background: rgba(0,0,0,0.2); display: inline-block; padding: 5px 15px; border-radius: 20px;">
+            Júlio César Rubiá | CREA-SP 5070517125
+        </div>
     </section>
 
-    <section class="orcamento" id="lead-section">
+    <section class="servicos">
+        <h2 id="services-title">Áreas de Atuação</h2>
+        <div class="grid-servicos">
+            <div class="card-servico">
+                <i class="fas fa-flask"></i>
+                <h3>Engenharia Química</h3>
+                <p>Pareceres sobre reações, classificação de produtos e fiscalização de metodologias laboratoriais.</p>
+            </div>
+            <div class="card-servico">
+                <i class="fas fa-leaf"></i>
+                <h3>Gestão Ambiental</h3>
+                <p>Análise de passivos ambientais, PGRS e conformidade com diretrizes da CETESB.</p>
+            </div>
+            <div class="card-servico">
+                <i class="fas fa-hard-hat"></i>
+                <h3>Segurança do Trabalho</h3>
+                <p>Perícias de Insalubridade (NR-15) e Periculosidade (NR-16). Elaboração de LTCAT e PGR.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="orcamento" id="contato">
         <div class="form-container">
-            <h2 style="text-align: center; color: var(--azul-autoridade);" id="form-title">Solicitar Contato</h2>
+            <h2 style="text-align: center; color: var(--azul-autoridade); margin-top: 0;" id="form-title">Solicitar Orçamento</h2>
             <form action="https://script.google.com/macros/s/AKfycbz-e3LPxItfCOehjhz-duYD4a2pBhwXkec5jT13ssgN2dHPJu3UuDP5NUUTzkdw6pVh/exec" method="POST">
-                <input type="text" name="nome" placeholder="Nome Completo" required>
-                <input type="tel" name="telefone" placeholder="Telefone / WhatsApp" required>
-                <input type="email" name="email" placeholder="Seu E-mail" required>
-                <textarea name="mensagem" rows="3" placeholder="Mensagem (Opcional)"></textarea>
-                <input type="hidden" name="origem" value="Site_Principal">
-                <button type="submit" class="form-btn" id="btn-send">ENVIAR PARA PLANILHA</button>
+                <input type="text" name="nome" placeholder="Seu Nome / Escritório" required>
+                <input type="tel" name="telefone" placeholder="Telefone com DDD" required>
+                <input type="email" name="email" placeholder="E-mail Profissional" required>
+                <textarea name="mensagem" rows="4" placeholder="Descreva brevemente a demanda (Opcional)"></textarea>
+                <input type="hidden" name="origem" value="Site_GitHub_Pages">
+                <button type="submit" class="form-btn" id="btn-send">ENVIAR SOLICITAÇÃO</button>
             </form>
         </div>
     </section>
 
+    <section class="faq-section">
+        <h2 style="text-align: center; margin-bottom: 40px;" id="faq-title">Dúvidas Frequentes</h2>
+        <div id="faq-list">
+            <p style="text-align: center;">Carregando perguntas da planilha...</p>
+        </div>
+    </section>
+
     <footer>
-        <p><strong>RUBYA | ENGENHARIA</strong></p>
-        <p>
-            <i class="fas fa-map-marker-alt"></i> <a href="https://maps.google.com/?q=Rua+Rio+Branco,+7-19,+Bauru+SP" target="_blank">Rua Rio Branco, 7-19, Sala 905 - Bauru-SP</a><br>
-            <i class="fas fa-envelope"></i> <a href="mailto:perito.rubya@gmail.com">perito.rubya@gmail.com</a><br>
-            <i class="fas fa-phone"></i> <a href="tel:+551432434821">(14) 3243-4821</a> | <a href="tel:+5514981353344">(14) 98135-3344</a>
-        </p>
-        <p style="font-size: 0.7rem; opacity: 0.5;">&copy; 2026 Júlio César Rubiá. Todos os direitos reservados.</p>
+        <div class="footer-grid">
+            <div class="footer-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <a href="https://www.google.com/maps/search/?api=1&query=Rua+Rio+Branco+7-19+Bauru" target="_blank">Rua Rio Branco, 7-19, Sala 905<br>Bauru-SP</a>
+            </div>
+            <div class="footer-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:perito.rubya@gmail.com">perito.rubya@gmail.com</a>
+            </div>
+            <div class="footer-item">
+                <i class="fas fa-phone-alt"></i>
+                <a href="tel:+551432434821">(14) 3243-4821</a><br>
+                <a href="tel:+5514981353344">(14) 98135-3344</a>
+            </div>
+        </div>
+        <p style="font-size: 0.8rem; opacity: 0.6;">© 2026 Júlio César Rubiá. Engenheiro Responsável. Todos os direitos reservados.</p>
     </footer>
 
-    <a href="https://wa.me/5514981353344?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20assistência%20técnica." class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5514981353344?text=Olá,%20gostaria%20de%20informações%20sobre%20assistência%20técnica." class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <div id="cookie-banner">
-        <p id="cookie-text">Este site utiliza cookies para garantir a melhor experiência possível.</p>
-        <button onclick="acceptCookies()">OK</button>
+        <p id="cookie-text">Utilizamos cookies para oferecer uma melhor experiência e analisar o tráfego do site.</p>
+        <button onclick="acceptCookies()">ACEITAR</button>
     </div>
 
     <script>
-        // Função simples de troca de idioma
+        // TRADUÇÕES
         const translations = {
             pt: {
                 sub: "Assistência Técnica Judicial",
                 hero: "Precisão Técnica em Demandas Judiciais",
-                form: "Solicitar Contato",
-                btn: "ENVIAR PARA PLANILHA",
-                cookie: "Este site utiliza cookies para garantir a melhor experiência."
+                services: "Áreas de Atuação",
+                form: "Solicitar Orçamento",
+                btn: "ENVIAR SOLICITAÇÃO",
+                faq: "Dúvidas Frequentes",
+                cookie: "Utilizamos cookies para oferecer uma melhor experiência e analisar o tráfego do site."
             },
             en: {
-                sub: "Forensic Engineering Assistance",
-                hero: "Technical Precision in Legal Demands",
-                form: "Request Contact",
-                btn: "SEND TO SPREADSHEET",
-                cookie: "This website uses cookies to ensure the best experience."
+                sub: "Forensic Engineering Services",
+                hero: "Technical Precision in Legal Matters",
+                services: "Expertise Areas",
+                form: "Request Quote",
+                btn: "SEND REQUEST",
+                faq: "Frequently Asked Questions",
+                cookie: "We use cookies to provide a better experience and analyze site traffic."
             },
             es: {
                 sub: "Asistencia Técnica Judicial",
-                hero: "Precisión Técnica en Demandas Judiciales",
-                form: "Solicitar Contacto",
-                btn: "ENVIAR A PLANILLA",
-                cookie: "Este sitio utiliza cookies para garantizar la mejor experiencia."
+                hero: "Precisión Técnica en Procesos Judiciales",
+                services: "Áreas de Actuación",
+                form: "Solicitar Presupuesto",
+                btn: "ENVIAR SOLICITUD",
+                faq: "Preguntas Frequentes",
+                cookie: "Utilizamos cookies para ofrecer una mejor experiencia y analizar el tráfico del sitio."
             }
         };
 
         function changeLang(lang) {
             document.getElementById('sub-title').innerText = translations[lang].sub;
             document.getElementById('hero-title').innerText = translations[lang].hero;
+            document.getElementById('services-title').innerText = translations[lang].services;
             document.getElementById('form-title').innerText = translations[lang].form;
             document.getElementById('btn-send').innerText = translations[lang].btn;
+            document.getElementById('faq-title').innerText = translations[lang].faq;
             document.getElementById('cookie-text').innerText = translations[lang].cookie;
         }
 
+        // FAQ DINÂMICO
+        async function loadFAQ() {
+            const url = 'https://script.google.com/macros/s/AKfycbz-e3LPxItfCOehjhz-duYD4a2pBhwXkec5jT13ssgN2dHPJu3UuDP5NUUTzkdw6pVh/exec';
+            try {
+                const response = await fetch(url);
+                const faqs = await response.json();
+                const container = document.getElementById('faq-list');
+                container.innerHTML = '';
+
+                faqs.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'faq-item';
+                    div.innerHTML = `
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            ${item.pergunta} <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">${item.resposta}</div>
+                    `;
+                    container.appendChild(div);
+                });
+            } catch (error) {
+                document.getElementById('faq-list').innerHTML = '<p>Erro ao carregar perguntas. Entre em contato por WhatsApp.</p>';
+            }
+        }
+
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            const isOpen = answer.style.display === 'block';
+            document.querySelectorAll('.faq-answer').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.faq-question i').forEach(i => i.style.transform = 'rotate(0deg)');
+            answer.style.display = isOpen ? 'none' : 'block';
+            icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+        }
+
+        // COOKIES
         function acceptCookies() {
             document.getElementById('cookie-banner').style.display = 'none';
-            localStorage.setItem('cookiesAccepted', 'true');
+            localStorage.setItem('cookiesRubya', 'accepted');
         }
 
         window.onload = () => {
-            if(localStorage.getItem('cookiesAccepted')) {
+            loadFAQ();
+            if(localStorage.getItem('cookiesRubya')) {
                 document.getElementById('cookie-banner').style.display = 'none';
             }
         };
